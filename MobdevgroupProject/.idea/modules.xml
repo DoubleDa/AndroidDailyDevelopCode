@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MainProject/MainProject.iml" filepath="$PROJECT_DIR$/MainProject/MainProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MobdevgroupProject.iml" filepath="$PROJECT_DIR$/MobdevgroupProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-webview/library-webview.iml" filepath="$PROJECT_DIR$/library-webview/library-webview.iml" />
+    </modules>
+  </component>
+</project>
