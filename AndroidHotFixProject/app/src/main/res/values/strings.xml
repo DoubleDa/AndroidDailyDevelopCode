@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AndroidHotFixProject</string>
+    <string name="action_settings">Settings</string>
+    <string name="show_info">显示信息</string>
+    <string name="fix_info">修复bug</string>
+</resources>

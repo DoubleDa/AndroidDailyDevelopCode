@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/but_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/show_info" />
+
+    <Button
+        android:id="@+id/but_fix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/but_show"
+        android:text="@string/fix_info" />
+
+</RelativeLayout>
