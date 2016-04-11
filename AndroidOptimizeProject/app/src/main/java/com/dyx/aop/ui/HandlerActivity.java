@@ -51,4 +51,30 @@ public class HandlerActivity extends Activity {
         myHandler.postDelayed(mRunnable, 1000 * 60 * 10);
         finish();
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        removeHandlerMsg();
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        removeHandlerMsg();
+    }
+
+    /**
+     * 创建一个静态Handler内部类，然后对 Handler 持有的对象使用弱引用，这样在回收时也可以回收 Handler
+     * 持有的对象，但是这样做虽然避免了 Activity 泄漏，不过 Looper 线程的消息队列中还是可能会有待处理的消息，
+     * 所以我们在 Activity 的 Destroy 时或者 Stop 时应该移除消息队列 MessageQueue 中的消息
+     */
+    private void removeHandlerMsg() {
+        myHandler.removeCallbacks(mRunnable);
+        //myHandler.removeCallbacks(r,token);
+        //myHandler.removeCallbacksAndMessages(token);
+        //myHandler.removeMessages(what);
+        //myHandler.removeMessages(what,token);
+    }
 }

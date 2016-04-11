@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidOptimizeProject</string>
+    <string name="action_settings">Settings</string>
+    <string name="but_str">开始LeakCanary</string>
+</resources>
