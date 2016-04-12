@@ -1,1 +1,1 @@
-include ':app', ':LeakCanaryDemo'
+include ':app', ':LeakCanaryDemo', ':BlockCanaryDemo'
