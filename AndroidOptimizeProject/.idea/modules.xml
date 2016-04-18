@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidLifecyle/AndroidLifecyle.iml" filepath="$PROJECT_DIR$/AndroidLifecyle/AndroidLifecyle.iml" />
       <module fileurl="file://$PROJECT_DIR$/AndroidOptimizeProject.iml" filepath="$PROJECT_DIR$/AndroidOptimizeProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/BlockCanaryDemo/BlockCanaryDemo.iml" filepath="$PROJECT_DIR$/BlockCanaryDemo/BlockCanaryDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeakCanaryDemo/LeakCanaryDemo.iml" filepath="$PROJECT_DIR$/LeakCanaryDemo/LeakCanaryDemo.iml" />

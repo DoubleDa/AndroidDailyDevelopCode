@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AndroidLifecyle" />
             <option value="$PROJECT_DIR$/BlockCanaryDemo" />
             <option value="$PROJECT_DIR$/LeakCanaryDemo" />
             <option value="$PROJECT_DIR$/app" />

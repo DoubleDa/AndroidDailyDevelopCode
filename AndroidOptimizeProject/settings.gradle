@@ -1,1 +1,1 @@
-include ':app', ':LeakCanaryDemo', ':BlockCanaryDemo'
+include ':app', ':LeakCanaryDemo', ':BlockCanaryDemo', ':AndroidLifecyle'
