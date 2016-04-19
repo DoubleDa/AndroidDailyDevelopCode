@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.dyx.abp"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+//    signingConfigs {
+//        release {
+//            try {
+//                storeFile file("myapp.keystore")
+//                storePassword KEY_STORE_PASSWORD
+//                keyAlias "appKey"
+//                keyPassword KEY_PASSWORD
+//            } catch (Exception e) {
+//            }
+//        }
+//        debug {
+//
+//        }
+//    }
+}
+
+dependencies {
+    //使用 Maven 依赖方案代替使用导入jar包方案 如果在你的项目中你明确使用率 jar文件，那么它们可能成为永久的版本，
+    //如2.1.1.下载jar包更新他们是很繁琐的， 这个问题Maven很好的解决了，这在Android Gradle构建中也是推荐的方法。
+    //你可 以指定版本的一个范围，如2.1.+,然后Maven会自动升级到制定的最新版本
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+    compile 'com.squareup.okhttp:okhttp:2.7.5'
+    compile 'com.squareup.okio:okio:1.7.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile files('libs/recyclerview-v7-22.0.0.jar')
+}
