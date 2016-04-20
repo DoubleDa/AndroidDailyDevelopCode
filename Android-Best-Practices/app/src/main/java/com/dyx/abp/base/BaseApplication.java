@@ -2,6 +2,8 @@ package com.dyx.abp.base;
 
 import android.app.Application;
 
+import com.apkfuns.logutils.LogUtils;
+
 /**
  * Author    : Yongxinda(yongxinda89@gmail.com)
  * Version   : 1.0
@@ -14,5 +16,7 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        LogUtils.configAllowLog = true;
+        LogUtils.configTagPrefix = "***Android-Best-Practice***";
     }
 }
