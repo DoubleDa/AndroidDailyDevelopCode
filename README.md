@@ -1,27 +1,26 @@
-# Android开发代码
-## Android-Best-Practices
+# Android Day-to-day Develop Code
+#### Android-Best-Practices
 
-## Android-Daily-Code
+#### Android-Daily-Code
 
-## AndroidDataCacheProject
+#### AndroidDataCacheProject
 
-## AndroidHotFixProject
+#### AndroidHotFixProject
 
-## AndroidOptimizeProject
+#### AndroidOptimizeProject
 
-## Jackson-Project
+#### Jackson-Project
 
-## JPushTestProject
+#### JPushTestProject
 
-## Memory-Leak-Project
+#### Memory-Leak-Project
 
-## MobdevgroupProject
+#### MobdevgroupProject
 
-## MyAndroidStudioProject
+#### MyAndroidStudioProject
 
-## MyGreenDao-Project
+#### MyGreenDao-Project
 
-## SoftkeyBoardCoverDemo
+#### SoftkeyBoardCoverDemo
 
-## WebpageOpenApp
-学习地址：<http://www.cnblogs.com/alisecurity/p/5417663.html/>
+#### WebpageOpenApp
