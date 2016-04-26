@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/but_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到简单界面" />
+
+    <Button
+        android:id="@+id/but_complex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到复杂界面" />
+
+    <Button
+        android:id="@+id/but_lambda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到Lambda界面" />
+
+    <Button
+        android:id="@+id/but_network"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到网络处理界面" />
+
+    <Button
+        android:id="@+id/but_thread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到线程安全界面" />
+
+</LinearLayout>
