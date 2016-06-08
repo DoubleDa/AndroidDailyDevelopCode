@@ -3,6 +3,8 @@ package com.dyx.ml.ui.activity;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.dyx.ml.utils.ToastUtil;
+
 import butterknife.ButterKnife;
 
 /**
@@ -14,7 +16,7 @@ import butterknife.ButterKnife;
  * alter time：16/5/23 下午10:25
  * alter remark：
  */
-public abstract class BaseActivity extends Activity{
+public abstract class BaseActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,4 +55,18 @@ public abstract class BaseActivity extends Activity{
     protected void onDestroy() {
         super.onDestroy();
     }
+
+    /**
+     * 文字信息
+     *
+     * @param msg
+     */
+    public void toastText(String msg) {
+        ToastUtil.textToast(this, msg);
+    }
+
+    public void toastImage(int resId, String msg) {
+        ToastUtil.imageToast(this, resId, msg);
+    }
+
 }
