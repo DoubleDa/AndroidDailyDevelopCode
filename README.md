@@ -1,4 +1,4 @@
-# Android Day-to-day Develop Code
+# Android日常开发记录
 
 ## [Android-Best-Practices](https://github.com/futurice/android-best-practices)
 
