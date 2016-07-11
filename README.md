@@ -541,29 +541,3 @@ In order to prevent ProGuard from stripping away needed classes or class members
 **DexGuard** 
 
 若果你需要核心工具来优化，和专门混淆的发布代码，考虑使用[DexGuard](http://www.saikoa.com/dexguard), 一个商业软件，ProGuard 也是有他们团队开发的。 它会很容易将Dex文件分割，来解决65K个方法限制问题。
-
-
-
-#### Android-Daily-Code
-
-#### AndroidDataCacheProject
-
-#### AndroidHotFixProject
-
-#### AndroidOptimizeProject
-
-#### Jackson-Project
-
-#### JPushTestProject
-
-#### Memory-Leak-Project
-
-#### MobdevgroupProject
-
-#### MyAndroidStudioProject
-
-#### MyGreenDao-Project
-
-#### SoftkeyBoardCoverDemo
-
-#### WebpageOpenApp
