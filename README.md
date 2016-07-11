@@ -346,7 +346,9 @@ Android应用程序在架构上大致是Java中的[Model-View-Controller](https:
 
 **将一个大的style文件分割成多个文件** 
 
-你可以有多个styles.xml文件。Android SDK支持其它文件，**styles这个文件名称并没有作用，起作用的是在文件里xml的<style>标签**。因此你可以有多个style文件
+
+
+你可以有多个styles.xml文件。Android SDK支持其它文件，styles这个文件名称并没有作用，起作用的是在文件里xml的style标签。因此你可以有多个style文件
 
 styles.xml,style_home.xml,style_item_details.xml,styles_forms.xml。 不用于资源文件路径需要为系统构建起的有意义，在res/values目录下的文件可以任意命名。
 
