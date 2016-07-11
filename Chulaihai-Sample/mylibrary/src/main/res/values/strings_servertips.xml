@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--状态码-->
+    <string-array name="servertip_codes">
+        <item>200</item>
+        <item>404</item>
+        <item>503</item>
+    </string-array>
+
+    <!--状态码对应值-->
+    <string-array name="servertip_msgs">
+        <item>服务器请求成功</item>
+        <item>请求的资源不存在</item>
+        <item>请求服务器不可用</item>
+    </string-array>
+</resources>
