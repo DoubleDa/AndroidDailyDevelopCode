@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SnackBar-Project</string>
+    <string name="str_but_simple">SnackBar简单使用</string>
+    <string name="str_but_click">SnackBar添加点击事件</string>
+    <string name="str_but_click_color">SnackBar添加点击按钮颜色</string>
+    <string name="str_but_bg">SnackBar设置背景颜色或背景图</string>
+    <string name="str_but_location">SnackBar显示位置</string>
+</resources>
