@@ -9,12 +9,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dyx.hlirp.R;
-import com.dyx.hlirp.model.DataModel;
+import com.dyx.hlirp.constants.Constants;
+import com.dyx.hlirp.model.Template1;
+import com.dyx.hlirp.model.Template2;
+import com.dyx.hlirp.model.Template3;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -27,26 +31,23 @@ import butterknife.OnClick;
  * alter remark：
  */
 public class DataAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private Context mContext;
-    private List<DataModel.DataEntity> mDataLists;
-    private final int TEMPLATEFIRST = 1, TEMPLATESCOND = 2, TEMPLATETHRID = 3, TEMPLATEFOUTH = 4;
+    public Context mContext;
+    private List<Object> mDataLists;
+    private final int TEMPLATEFIRST = 1, TEMPLATESCOND = 2, TEMPLATETHRID = 3;
 
-    public DataAdapter(Context mContext, List<DataModel.DataEntity> mDataLists) {
+    public DataAdapter(Context mContext, List<Object> mDataLists) {
         this.mContext = mContext;
         this.mDataLists = mDataLists;
     }
 
     @Override
     public int getItemViewType(int position) {
-        int type = mDataLists.get(position).getTemplateType();
-        if (type == TEMPLATEFIRST) {
+        if (mDataLists.get(position) instanceof Template1) {
             return TEMPLATEFIRST;
-        } else if (type == TEMPLATESCOND) {
+        } else if (mDataLists.get(position) instanceof Template2) {
             return TEMPLATESCOND;
-        } else if (type == TEMPLATETHRID) {
+        } else if (mDataLists.get(position) instanceof Template3) {
             return TEMPLATETHRID;
-        } else if (type == TEMPLATEFOUTH) {
-            return TEMPLATEFOUTH;
         }
         return 0;
     }
@@ -69,10 +70,6 @@ public class DataAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 View view3 = inflater.inflate(R.layout.template3_layout, parent, false);
                 viewHolder = new ViewHolderThrid(view3);
                 break;
-            case TEMPLATEFOUTH:
-                View view4 = inflater.inflate(R.layout.template4_layout, parent, false);
-                viewHolder = new ViewHolderFouth(view4);
-                break;
             default:
                 break;
         }
@@ -91,23 +88,38 @@ public class DataAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 configureVh2(vh2, position);
                 break;
             case TEMPLATETHRID:
-                break;
-            case TEMPLATEFOUTH:
+                ViewHolderThrid vh3 = (ViewHolderThrid) holder;
+                configureVh3(vh3, position);
                 break;
             default:
                 break;
         }
     }
 
+    private void configureVh3(ViewHolderThrid vh3, int position) {
+        Template3 template3 = (Template3) mDataLists.get(position);
+        if (template3 != null) {
+            vh3.mTv_title_template3.setText(template3.getImgTitle());
+            vh3.mTv_description_template3.setText(template3.getGoodsDescription());
+            vh3.mTv_my_price_template3.setText(template3.getGoodsMyPrice());
+            vh3.mTv_market_price_template3.setText(template3.getGoodsMarketPrice());
+            Picasso.with(mContext).load(template3.getImgUrl()).into(vh3.mIv_template3);
+        }
+    }
+
     private void configureVh2(ViewHolderSecond vh2, int position) {
-//        DataModel.DataEntity dataEntity = mDataLists.get(position);
-//        Picasso.with(mContext).load(dataEntity.getImgUrl()).into(vh2.ivTemplate2);
-//        vh2.tvTemplate2.setText(mDataLists.get(position).);
+        Template2 template2 = (Template2) mDataLists.get(position);
+        if (template2 != null) {
+            vh2.mTv_template2.setText(template2.getImgTitle());
+            Picasso.with(mContext).load(template2.getImgUrl()).into(vh2.mIv_template2);
+        }
     }
 
     private void configureVh1(ViewHolderFirst vh1, int position) {
-        DataModel.DataEntity dataEntity = mDataLists.get(position);
-        Picasso.with(mContext).load(dataEntity.getImgUrl()).into(vh1.ivTemplate1);
+        Template1 template1 = (Template1) mDataLists.get(position);
+        if (template1 != null) {
+            Picasso.with(mContext).load(template1.getImgUrl()).into(vh1.mIv_template1);
+        }
     }
 
     @Override
@@ -120,17 +132,11 @@ public class DataAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
      * 模板一
      */
     public static class ViewHolderFirst extends RecyclerView.ViewHolder {
-        @Bind(R.id.iv_template1)
-        ImageView ivTemplate1;
-
-        @OnClick(R.id.iv_template1)
-        public void onClick() {
-
-        }
+        ImageView mIv_template1;
 
         public ViewHolderFirst(View itemView) {
             super(itemView);
-
+            mIv_template1 = (ImageView) itemView.findViewById(R.id.iv_template1);
         }
 
     }
@@ -139,13 +145,13 @@ public class DataAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
      * 模板二
      */
     public static class ViewHolderSecond extends RecyclerView.ViewHolder {
-        @Bind(R.id.iv_template2)
-        ImageView ivTemplate2;
-        @Bind(R.id.tv_template2)
-        TextView tvTemplate2;
+        ImageView mIv_template2;
+        TextView mTv_template2;
 
         public ViewHolderSecond(View itemView) {
             super(itemView);
+            mIv_template2 = (ImageView) itemView.findViewById(R.id.iv_template2);
+            mTv_template2 = (TextView) itemView.findViewById(R.id.tv_template2);
         }
     }
 
@@ -153,31 +159,21 @@ public class DataAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
      * 模板三
      */
     public static class ViewHolderThrid extends RecyclerView.ViewHolder {
-        @Bind(R.id.tv_title_template3)
-        TextView tvTitleTemplate3;
-        @Bind(R.id.tv_description_template3)
-        TextView tvDescriptionTemplate3;
-        @Bind(R.id.tv_my_price_template3)
-        TextView tvMyPriceTemplate3;
-        @Bind(R.id.tv_market_price_template3)
-        TextView tvMarketPriceTemplate3;
-        @Bind(R.id.iv_template3)
-        ImageView ivTemplate3;
+        TextView mTv_title_template3;
+        TextView mTv_description_template3;
+        TextView mTv_my_price_template3;
+        TextView mTv_market_price_template3;
+        ImageView mIv_template3;
 
         public ViewHolderThrid(View itemView) {
             super(itemView);
+            mTv_title_template3 = (TextView) itemView.findViewById(R.id.tv_title_template3);
+            mTv_description_template3 = (TextView) itemView.findViewById(R.id.tv_description_template3);
+            mTv_my_price_template3 = (TextView) itemView.findViewById(R.id.tv_my_price_template3);
+            mTv_market_price_template3 = (TextView) itemView.findViewById(R.id.tv_market_price_template3);
+            mIv_template3 = (ImageView) itemView.findViewById(R.id.iv_template3);
         }
     }
 
-    /**
-     * 模板四
-     */
-    public static class ViewHolderFouth extends RecyclerView.ViewHolder {
-        @Bind(R.id.rv_template4)
-        RecyclerView rvTemplate4;
 
-        public ViewHolderFouth(View itemView) {
-            super(itemView);
-        }
-    }
 }
