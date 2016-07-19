@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Heterogenous-Layouts-inside-RecyclerView-Project</string>
+    <string name="app_name">首页</string>
+    <string name="but_custom">自定义首页实现</string>
+    <string name="but_my">我的首页实现</string>
 </resources>

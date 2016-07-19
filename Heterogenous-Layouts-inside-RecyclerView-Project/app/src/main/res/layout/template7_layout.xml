@@ -6,9 +6,9 @@
     android:orientation="vertical"
     android:padding="3dp">
 
-    <ImageView
-        android:id="@+id/iv_template1"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_item"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="fitXY" />
+        android:layout_height="wrap_content" />
+
 </LinearLayout>
