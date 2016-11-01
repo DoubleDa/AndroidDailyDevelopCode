@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LeakCanaryDemo</string>
+    <string name="btn_singleton_name">错误使用单例造成的内存泄漏</string>
+    <string name="btn_handler_name">Handler造成的内存泄漏</string>
+    <string name="btn_thread_name">线程造成的内存泄漏</string>
+    <string name="btn_not_static_name">非静态内部类创建静态实例造成的内存泄漏</string>
+    <string name="btn_cursor_name">资源未关闭造成的内存泄漏</string>
+</resources>
