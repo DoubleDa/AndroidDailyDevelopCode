@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MVCProject</string>
+    <string name="get_access_token">获取access_token</string>
+</resources>
